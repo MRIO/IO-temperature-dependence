@@ -8,7 +8,7 @@
 
 <pulseGenerator id="iclamp0" delay="500 ms" duration="200 ms" amplitude="-1 nA"/>
 
-<network id="net" type="networkWithTemperature" temperature="35 degC">
+<network id="net" type="networkWithTemperature" temperature="20 degC">
 
 	
 
