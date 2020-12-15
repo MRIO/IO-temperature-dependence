@@ -1,0 +1,43 @@
+<Lems>
+    
+    <!-- 
+
+        This LEMS file has been automatically generated using PyNeuroML v0.5.3 (libNeuroML v0.2.51)
+
+     -->
+    
+    <!-- Specify which component to run -->
+    <Target component="Vm_Test"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+    
+    <Include file="nml_C51A.net.nml"/>
+    <Include file="C51A_scaled_exp_resample_5.cell.nml"/>
+    <Include file="na_s.channel.nml"/>
+    <Include file="ExpTime.nml"/>
+    <Include file="kdr.channel.nml"/>
+    <Include file="k.channel.nml"/>
+    <Include file="cal.channel.nml"/>
+    <Include file="cah.channel.nml"/>
+    <Include file="kca.channel.nml"/>
+    <Include file="h.channel.nml"/>
+    <Include file="ca.nml"/>
+    <Include file="na_a.channel.nml"/>
+    <Include file="leak.channel.nml"/>
+   
+    <Simulation id="Vm_Test" length="100ms" step="0.05ms" target="net" seed="12345">  <!-- Note seed: ensures same random numbers used every run -->
+        
+        <Display id="display0" title="Spiking pattern" timeScale="1ms" xmin="-10.0" xmax="110.00000000000001" ymin="-90" ymax="50">
+            <Line id="v" quantity="pop24/0/C51A/0/v" scale="1" color="#d54f33" timeScale="1ms"/>
+        </Display>
+        
+        <OutputFile id="Volts_file" fileName="Vm_Test.v.dat">
+            <OutputColumn id="v" quantity="pop24/0/C51A/0/v"/> 
+        </OutputFile>
+        
+    </Simulation>
+
+</Lems>
