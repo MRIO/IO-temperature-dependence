@@ -1389,7 +1389,7 @@ inode R X Y Z D/2 idpar</notes>
                 <include segmentGroup="Sec_Comp_156"/>
             </segmentGroup>
 
-            <segmentGroup id="axon_group" neuroLexId="GO:0030424">    <!--Axon group-->
+            <segmentGroup id="dendrite_group" neuroLexId="GO:0030424">    <!--Axon group-->
 
                 <include segmentGroup="Sec_Comp_2"/>
                 <include segmentGroup="Sec_Comp_3"/>
@@ -1436,10 +1436,6 @@ inode R X Y Z D/2 idpar</notes>
                 <channelDensity condDensity="35 mS_per_cm2" id="kca_dend" segmentGroup="dendrite_group" ionChannel="kca" ion="k" erev="-75 mV"/>
                 <channelDensity condDensity="25 mS_per_cm2" id="h_dend" segmentGroup="dendrite_group" ionChannel="h" ion="k" erev="-43 mV"/>
 
-                <!-- axon -->
-                <channelDensity condDensity="200 mS_per_cm2" id="na_axon" segmentGroup="axon_group" ionChannel="na_a" ion="na" erev="55 mV"/>
-                <channelDensity condDensity="200 mS_per_cm2" id="k_axon" segmentGroup="axon_group" ionChannel="k" ion="k" erev="-75 mV"/>
-
                 <channelDensity condDensity="1.3e-2 mS_per_cm2" id="leak_all" segmentGroup="all" ionChannel="leak" ion="_leak" erev="10 mV"/>
                 
                 <spikeThresh value="0 mV"/>
@@ -1454,7 +1450,6 @@ inode R X Y Z D/2 idpar</notes>
 
                 <resistivity value=".1 ohm_cm" segmentGroup="soma_group"/>
                 <resistivity value=".1 ohm_cm" segmentGroup="dendrite_group"/>
-                <resistivity value=".1 ohm_cm" segmentGroup="axon_group"/>
             </intracellularProperties>
 
         </biophysicalProperties>
