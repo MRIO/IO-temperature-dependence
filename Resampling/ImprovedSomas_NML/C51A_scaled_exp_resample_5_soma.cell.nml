@@ -32,7 +32,6 @@ inode R X Y Z D/2 idpar</notes>
 
             <segment id="0" name="Comp_1">
                 <proximal x="100.0331" y="117.0343" z="64.0716" diameter="12.16"/>
-                <distal x="109.85363" y="117.39723" z="64.032295" diameter="3.8"/>
             </segment>
 
             <segment id="1" name="Comp_3">
