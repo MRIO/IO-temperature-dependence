@@ -20,6 +20,7 @@
 
     <!-- all  -->
     <include href="leak.channel.nml"/>
+    
     <cell id="C160802A">
 
       <notes>
@@ -2064,7 +2065,7 @@
                 <species segmentGroup="basal_dendrite" id="ca" ion="ca" concentrationModel="ca_conc" initialConcentration="3.7152 mM" initialExtConcentration="3.0mM"/>
 
                 <resistivity value=".1 ohm_cm" segmentGroup="all"/>
-                
+
             </intracellularProperties>
 
         </biophysicalProperties>
