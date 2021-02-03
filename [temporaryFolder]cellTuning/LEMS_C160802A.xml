@@ -1,0 +1,51 @@
+<Lems>
+    
+    <!-- 
+
+        This LEMS file has been automatically generated using PyNeuroML v0.5.3 (libNeuroML v0.2.51)
+
+     -->
+    
+    <!-- Specify which component to run -->
+    <Target component="C160802A"/>
+
+    <!-- Include core NeuroML2 ComponentType definitions -->
+    <Include file="Cells.xml"/>
+    <Include file="Networks.xml"/>
+    <Include file="Simulation.xml"/>
+    
+    <Include file="nml_C160802A.net.nml"/>
+    <Include file="C160802A_scaled_resample_5.cell.nml"/>
+    <Include file="na_s.channel.nml"/>
+    <Include file="ExpTime.nml"/>
+    <Include file="kdr.channel.nml"/>
+    <Include file="k.channel.nml"/>
+    <Include file="cal.channel.nml"/>
+    <Include file="cah.channel.nml"/>
+    <Include file="kca.channel.nml"/>
+    <Include file="h.channel.nml"/>
+    <Include file="ca.nml"/>
+    <Include file="na_a.channel.nml"/>
+    <Include file="leak.channel.nml"/>
+   
+    <Simulation id="C160802A" length="1000ms" step="0.05ms" target="net" seed="12345">  <!-- Note seed: ensures same random numbers used every run -->
+        
+        <Display id="Volts_display" title="Spiking pattern" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="-90" ymax="50">
+            <Line id="0" quantity="pop/0/C160802A/0/v" scale="1" color="#d54f33" timeScale="1ms"/>
+        </Display>
+        
+        <Display id="Gate_display" title="Gating variables" timeScale="1ms" xmin="-100.0" xmax="1100.0" ymin="0" ymax="1">
+            <Line id="0" quantity="pop/0/C160802A/0/biophys/membraneProperties/cal_soma/cal/k/q" scale="1" color="#0534e4" timeScale="1ms"/>
+        </Display>
+        
+        <OutputFile id="Volts_file" fileName="C160802A.v.dat">
+            <OutputColumn id="0" quantity="pop/0/C160802A/0/v"/> 
+        </OutputFile>
+        
+        <OutputFile id="Gate_file" fileName="C160802A.gates.dat">
+            <OutputColumn id="0" quantity="pop/0/C160802A/0/biophys/membraneProperties/cal_soma/cal/k/q"/> 
+        </OutputFile>
+        
+    </Simulation>
+
+</Lems>

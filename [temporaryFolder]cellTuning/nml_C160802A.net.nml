@@ -1,0 +1,18 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.1.xsd" id="net">
+    <include href="C160802A_scaled_resample_5.cell.nml"/>
+    <pulseGenerator id="iclamp0" delay="300ms" duration="10ms" amplitude="-1nA"/>
+    <pulseGenerator id="iclamp1" delay="800ms" duration="10ms" amplitude="1nA"/>
+    <network id="net" type="networkWithTemperature" temperature="37 degC">
+        <population id="pop" component="C160802A" size="1" type="populationList">
+            <instance id="0">
+                <location x="0." y="0." z="0."/>
+            </instance>
+        </population>
+        <inputList id="clamps0" population="pop" component="iclamp0">
+            <input id="0" target="../pop/0/C160802A" destination="synapses"/>
+        </inputList>
+        <inputList id="clamps1" population="pop" component="iclamp1">
+            <input id="0" target="../pop/0/C160802A" destination="synapses"/>
+        </inputList>
+    </network>
+</neuroml>
