@@ -1,0 +1,109 @@
+<neuroml xmlns="http://www.neuroml.org/schema/neuroml2"  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.neuroml.org/schema/neuroml2 https://raw.github.com/NeuroML/NeuroML2/development/Schemas/NeuroML2/NeuroML_v2.1.xsd" id="Try_morph_file">
+    <cell id="My_Cell">
+        <morphology id="MyMorphologyTry">
+            <segment id="0" name="Comp_0">
+                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="14.62"/>
+                <distal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="14.62"/>
+            </segment>
+            <segment id="1" name="Comp_1">
+                <parent segment="0"/>
+                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="14.62"/>
+                <distal x="-1.846097e+00" y="8.703165e+00" z="3.613398e-01" diameter="7.92608"/>
+            </segment>
+            <segment id="2" name="Comp_2">
+                <parent segment="0"/>
+                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="14.62"/>
+                <distal x="1.166814e+00" y="8.228264e+00" z="4.771765e-01" diameter="4.10108"/>
+            </segment>
+            <segment id="10" name="Comp_10">
+                <parent segment="0"/>
+                <proximal x="0.000000e+00" y="0.000000e+00" z="0.000000e+00" diameter="14.62"/>
+                <distal x="6.266088e+00" y="-4.328482e+00" z="-8.755713e-01" diameter="2.38"/>
+            </segment>
+            <segment id="3" name="Comp_3">
+                <parent segment="1"/>
+                <proximal x="-1.846097e+00" y="8.703165e+00" z="3.613398e-01" diameter="7.92608"/>
+                <distal x="-2.399789e+00" y="1.344249e+01" z="1.337914e+00" diameter="4.48392"/>
+            </segment>
+            <segment id="5" name="Comp_5">
+                <parent segment="2"/>
+                <proximal x="1.166814e+00" y="8.228264e+00" z="4.771765e-01" diameter="4.10108"/>
+                <distal x="2.287168e+00" y="1.248584e+01" z="-5.238930e-02" diameter="3.76108"/>
+            </segment>
+            <segment id="11" name="Comp_11">
+                <parent segment="10"/>
+                <proximal x="6.266088e+00" y="-4.328482e+00" z="-8.755713e-01" diameter="2.38"/>
+                <distal x="1.114042e+01" y="-4.607469e+00" z="-6.791156e-01" diameter="1.76392"/>
+            </segment>
+            <segment id="4" name="Comp_4">
+                <parent segment="3"/>
+                <proximal x="-2.399789e+00" y="1.344249e+01" z="1.337914e+00" diameter="4.48392"/>
+                <distal x="-3.146299e+00" y="1.808973e+01" z="2.384537e+00" diameter="1.93392"/>
+            </segment>
+            <segment id="6" name="Comp_6">
+                <parent segment="5"/>
+                <proximal x="2.287168e+00" y="1.248584e+01" z="-5.238930e-02" diameter="3.76108"/>
+                <distal x="4.396917e+00" y="1.679706e+01" z="-1.266570e-01" diameter="2.82608"/>
+            </segment>
+            <segment id="7" name="Comp_7">
+                <parent segment="6"/>
+                <proximal x="4.396917e+00" y="1.679706e+01" z="-1.266570e-01" diameter="2.82608"/>
+                <distal x="6.551151e+00" y="2.125180e+01" z="-2.214974e-02" diameter="2.125"/>
+            </segment>
+            <segment id="8" name="Comp_8">
+                <parent segment="6"/>
+                <proximal x="4.396917e+00" y="1.679706e+01" z="-1.266570e-01" diameter="2.82608"/>
+                <distal x="1.638466e+00" y="2.587233e+01" z="-2.037737e+00" diameter="1.7"/>
+            </segment>
+            <segment id="9" name="Comp_9">
+                <parent segment="7"/>
+                <proximal x="6.551151e+00" y="2.125180e+01" z="-2.214974e-02" diameter="2.125"/>
+                <distal x="7.819655e+00" y="2.541218e+01" z="-2.040230e-01" diameter="2.5925"/>
+            </segment>
+            <segmentGroup id="Cable_1">
+                <member segment="4"/>
+                <member segment="3"/>
+                <member segment="1"/>
+            </segmentGroup>
+            <segmentGroup id="Cable_2">
+                <member segment="8"/>
+            </segmentGroup>
+            <segmentGroup id="Cable_3">
+                <member segment="9"/>
+                <member segment="7"/>
+            </segmentGroup>
+            <segmentGroup id="Cable_4">
+                <member segment="11"/>
+                <member segment="10"/>
+            </segmentGroup>
+            <segmentGroup id="Cable_5">
+                <member segment="6"/>
+                <member segment="5"/>
+                <member segment="2"/>
+            </segmentGroup>
+            <segmentGroup id="Cable_6">
+                <member segment="0"/>
+            </segmentGroup>
+            <segmentGroup id="all">
+                <include segmentGroup="Cable_1"/>
+                <include segmentGroup="Cable_2"/>
+                <include segmentGroup="Cable_3"/>
+                <include segmentGroup="Cable_4"/>
+                <include segmentGroup="Cable_5"/>
+                <include segmentGroup="Cable_6"/>
+            </segmentGroup>
+            <segmentGroup id="all_dend">
+                <include segmentGroup="Cable_1"/>
+                <include segmentGroup="Cable_2"/>
+                <include segmentGroup="Cable_3"/>
+                <include segmentGroup="Cable_5"/>
+            </segmentGroup>
+            <segmentGroup id="all_soma">
+                <include segmentGroup="Cable_6"/>
+            </segmentGroup>
+            <segmentGroup id="all_axon">
+                <include segmentGroup="Cable_4"/>
+            </segmentGroup>
+        </morphology>
+    </cell>
+</neuroml>
